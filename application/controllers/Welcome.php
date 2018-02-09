@@ -38,19 +38,13 @@ class Welcome extends CI_Controller {
 
     public function add()
     {
-        $id = $this->input->post('id');
-        $name = $this->input->post('name');
-        $lastname = $this->input->post('lastname');
-        $email = $this->input->post('email');
-        $phone = $this->input->post('phone');
-        $address = $this->input->post('address');
         $data = array(
-            'id' => $id,
-            'name' => $name,
-            'lastname' => $lastname,
-            'email' => $email,
-            'phone' => $phone,
-            'address' => $address
+            'id' => $this->input->post('id'),
+            'name' => $this->input->post('name'),
+            'lastname' => $this->input->post('lastname'),
+            'email' => $this->input->post('email'),
+            'phone' => $this->input->post('phone'),
+            'address' => $this->input->post('address')
         );
         $insert = $this->crud_model->postNew($data);
 	}

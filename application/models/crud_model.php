@@ -17,13 +17,13 @@ class Crud_model extends CI_Model{
     public function getView()
     {
         $this->db->from('users');
-        $query = $this->db->get();
-        return $query->result();
+        $query = $this->db->get()->result();
+        return $query;
     }
 
     public function postNew($data)
     {
-        $this->db-insert('users',$data);
+        $this->db->insert('users',$data);
         return $this->db->insert_id();
     }
 
